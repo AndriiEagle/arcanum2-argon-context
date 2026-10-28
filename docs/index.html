@@ -1,0 +1,371 @@
+<!doctype html><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Arcanum 2 context pack</title><style>body{font:16px/1.5 Georgia,serif;max-width:980px;margin:24px auto;padding:0 16px;color:#222;background:#faf7f0}pre{background:#eee;padding:10px;white-space:pre-wrap}code{background:#eee;padding:0 3px}table{border-collapse:collapse;margin:8px 0}td{border:1px solid #ccc;padding:4px 8px;vertical-align:top}img{max-width:100%;border:1px solid #999;margin:6px 0}h2{border-top:2px solid #444;padding-top:14px}</style>
+<h1>Arcanum 2 — context pack for art and design models</h1>
+<p>Everything on one page. Plain-text version: <a href='https://raw.githubusercontent.com/AndriiEagle/arcanum2-argon-context/master/ALL_IN_ONE.md'>ALL_IN_ONE.md</a>. Repository: <a href='https://github.com/AndriiEagle/arcanum2-argon-context'>AndriiEagle/arcanum2-argon-context</a>.</p>
+<h2>1. WORLD_BIBLE.md</h2>
+<h2>World bible — working title &quot;Arcanum 2&quot; (painted narrative game, Zurich, today + 5 years)</h2>
+<p>This file is the condensed canon for an external art/design model. Everything here is decided; do not re-invent it.</p>
+<h3>One paragraph</h3>
+<p>A migrant hero in his thirties lives in a rented flat in Elgg, a small town east of Zurich, and commutes by SBB train to</p>
+<p>Zurich Stadelhofen and the Altstadt. By day: a real, beautiful Switzerland — craft, money worries, burnout, a phone with</p>
+<p>an AI assistant, a neighbour who plays the violin. By night: dreams in cinematic monochrome with one symbolic colour.</p>
+<p>Combat, when it comes, is harsh (Fear &amp; Hunger register), but chapter 1 is about one year of life: it ends when the hero</p>
+<p>ships the game of his dreams. The hero is the author&#x27;s alter ego under another name; real people appear under other</p>
+<p>names. Languages: 5; the &quot;migrant language&quot; mechanic shows German lines with blurred words and the hero&#x27;s translated</p>
+<p>thought underneath.</p>
+<h3>Genre and camera</h3>
+<p>Painted isometric 2D (Godot 4.7), fixed camera per location, click-to-move, hotspots, dialogue boxes with portrait,</p>
+<p>thought bubbles. References the owner names: Arcanum, Fallout 1-2, Heroes of Might and Magic III (isometry and</p>
+<p>readability), visual novels for portrait emotion, Steins;Gate for the phone-in-hand moment, Sherlock (BBC) for the</p>
+<p>&quot;deduction overlay&quot; when the hero reasons.</p>
+<h3>Visual law (sealed)</h3>
+<p>1. World: painted, crisp, realism + a pinch of magic + technology five years ahead. Not pixel art. Two accepted idioms:</p>
+<p>   oil/gouache painting (A) and parchment schematic (D) for maps/diaries.</p>
+<p>2. Night is never a blue filter: moon, stars, a moon path on water, warm windows.</p>
+<p>3. Dreams: Sin City monochrome, cinematic, one symbolic colour per dream on about 20% of the frame, always meaningful</p>
+<p>   (green snake eyes, red heat). Near-future noir layer: 70-80% monochrome, at most 30% accent.</p>
+<p>4. Light and palette per location are in <code>ART_BIBLE.md</code> (temperatures, the &quot;living window&quot; F5 rule: one lit window</p>
+<p>   shows where the person and the story are).</p>
+<p>5. Autumn is the season: golden leaves, wet asphalt with reflections, rain and umbrellas, church bells; a sunny version</p>
+<p>   and a grey rainy version of the same morning must both exist and change how people move and how many are outside.</p>
+<p>6. Hero style &quot;3 — crisp&quot;: clean silhouette, readable at 1280x720, no blur; morning scenes in a bathrobe, laptop asleep</p>
+<p>   on the windowsill; later the grey jacket and an electro-acoustic guitar with steel strings.</p>
+<p>7. UI: painted kit, monochrome phone UI with a ChatGPT-like assistant restyled to the game, icons that can replace</p>
+<p>   words (traffic-sign clarity), one highlighted word per sentence at most in one sentence of three.</p>
+<h3>Route of chapter 1 (opening)</h3>
+<p>Dream montage (fast monochrome cuts, horror undertone) -&gt; black -&gt; church bells -&gt; wake up in the Elgg flat (coffee on</p>
+<p>the windowsill, diary, phone) -&gt; street in Elgg (fountain with a child-angel statue, church, benches, a modest pizzeria,</p>
+<p>a burnt shed, the neighbour&#x27;s house with the violin room under a sloped roof and a skylight) -&gt; SBB train (Winterthur in</p>
+<p>the window) -&gt; Zurich Stadelhofen (wet yellow leaves, the &quot;Velora&quot; kiosk, a bench with one dry seat) -&gt; Altstadt.</p>
+<h3>Mechanics the art must serve</h3>
+<p>- Energy 1-100 drives saturation, detail, focus and perceived world speed (100 = full colour; low = pale, slow, blurred).</p>
+<p>- Choices change the portrait and body language with non-linear easing (draining = fast in/slow out; energising =</p>
+<p>  slow in/fast out).</p>
+<p>- Thought bubble vs. spoken line are visually different; while thinking, the surroundings desaturate and freeze in a</p>
+<p>  radius; the most important object keeps its colour (deduction mode).</p>
+<p>- First-person &quot;glasses&quot; mask for close looks: elliptical vision, faint nose, centre 30% sharp, edges softer.</p>
+<p>- Occlusion x-ray halo around the hero behind props (Arcanum/Fallout style).</p>
+<p>- Passers-by as translucent &quot;ghosts&quot; on looping paths; sit on a bench and listen to Swiss-German murmur.</p>
+<p>- Three contrasting modes (age band x psychotype x maturity) with small parameter deltas, chosen to make the player</p>
+<p>  replay the other two.</p>
+<h3>Hard no</h3>
+<p>No pixel art, no blue-filter night, no flat grey dreams, no generic fantasy, no stock-photo faces, no text walls.</p>
+<h2>2. ART_BIBLE.md</h2>
+<h2>Game Forge — графическая цель открытия</h2>
+<p>Статус: 12 нарисованных кадров-целей; это направление для движка, а не кадры работающей игры.</p>
+<p>Обязательная основа: <code>docs/DECISIONS.md</code> O1–O8, P5, раунд 9 B1/F5 и <code>docs/VISION_OPENING.md</code>.</p>
+<p>Живопись: детальный вариант A; опоры — <code>street_round01_oil_day/night_serene/winter.png</code> и <code>style-test-A-B-C-D.png</code>.</p>
+<p>Сохранять наблюдательность масла/гуаши: объёмная архитектура, материальность, мягкие края вдали, точные акценты вблизи.</p>
+<p>Не имитировать пиксельную графику или гладкую пластиковую миниатюру; улица должна продолжаться за границами кадра.</p>
+<h3>Палитра из готовых картинок</h3>
+<p>Hex — sRGB-центроиды 12-цветной квантизации соответствующего <code>targets/&lt;место&gt;/v2.png</code> при 256×144.</p>
+<p>Это экранные цвета результата; не подставлять их без преобразования в linear albedo материалов.</p>
+<table>
+<tr><td>Кадр</td><td>Тень / основа</td><td>Средний тон</td><td>Тёплый акцент</td><td>Применение</td></tr>
+<tr><td>Elgg, дождь</td><td><code>#1A1F25</code>, <code>#2B313B</code></td><td><code>#5F5046</code></td><td><code>#8F6D4C</code></td><td>холодные крыши, тёплые локальные окна</td></tr>
+<tr><td>Elgg, золото</td><td><code>#3F3937</code></td><td><code>#8B7362</code></td><td><code>#B4763A</code>, <code>#DBA969</code></td><td>штукатурка, охра, прозрачность листвы</td></tr>
+<tr><td>Вагон</td><td><code>#220C0B</code></td><td><code>#756C73</code></td><td><code>#C9AE9A</code></td><td>бордовая шерсть, прохладная даль, свет окна</td></tr>
+<tr><td>Штадельхофен</td><td><code>#504A50</code></td><td><code>#A47F5D</code></td><td><code>#D2A874</code></td><td>мокрые плиты, бетон, свет под навесом</td></tr>
+<tr><td>Альтштадт</td><td><code>#192D3B</code>, <code>#17191C</code></td><td><code>#8A6B50</code></td><td><code>#B78D5C</code></td><td>река, крыши, кафе и трамвай</td></tr>
+<tr><td>Квартира</td><td><code>#91847A</code></td><td><code>#D6BB9A</code></td><td><code>#F2D8B2</code>, <code>#F9E4C0</code></td><td>прохладная тень, кремовая краска, солнечный участок</td></tr>
+</table>
+<h3>Свет и воздух</h3>
+<p>Температуры и численные параметры ниже — стартовые настройки для движка, не измерение освещения нарисованной сцены.</p>
+<p>Дождливый вечер: небо 7000–8500 K; окна 2700–3000 K; станционные практические источники около 3000 K.</p>
+<p>Золотая осень: низкое солнце 3500–4500 K, прохладное небо 6500–8000 K; длинные согласованные тени.</p>
+<p>Утро: солнце около 4800 K, небо около 7000 K; свет должен оставлять читаемой фактуру подоконника.</p>
+<p>Держать один главный световой остров; второстепенные окна различаются яркостью и цветом, часть остаётся тёмной.</p>
+<p>Тёплые освещённые поверхности ориентировочно на 2–3 ступени выше соседней тени; детали в тенях сохраняются.</p>
+<p>Filmic/ACES-подобное сжатие бликов; bloom только на самых ярких лампах, без общей молочной пелены.</p>
+<p>Туман разреженный, нарастает по глубине; передний план и путь героя остаются ясными.</p>
+<p>Дождь виден преимущественно в контровом свете; мелкие струи у водостоков, редкие капли, не белая сетка поверх кадра.</p>
+<p>Свет-сопровождение: 2–3 обычных локальных светильника мягко усиливаются возле героя и впереди него, затихают позади.</p>
+<p>Не рисовать светящуюся линию маршрута; свет касается камня, обуви и нижней части фасада физически согласованно.</p>
+<p>«Живое окно» F5 — особенно тёплый янтарный интерьер с глубиной за стеклом и мягким светом на откосах.</p>
+<h3>Материалы и слои</h3>
+<p>Мокрый камень: разные высоты плит, тёмные влажные края, матовые швы, локальные неглубокие лужи.</p>
+<p>Стартовая roughness: сухой камень 0.7–0.9; мокрые участки 0.2–0.4; швы около 0.8. Не покрывать всю улицу зеркалом.</p>
+<p>Отражения разрываются рельефом и рябью; их направление следует источникам, а не декоративным полосам.</p>
+<p>Штукатурка: матовая известковая поверхность, мягкая неоднородность тона, тонкие сколы на углах, потемнение у цоколя.</p>
+<p>Кровля: настоящая толщина карниза, ряды черепицы, небольшая вариация цвета и влажности; силуэт крыши важнее шума.</p>
+<p>Дерево: волокно и следы кисти вблизи, разумный износ; квартира скромная, ухоженная, без преувеличенного разрушения.</p>
+<p>Стекло: слабое отражение интерьера, двойной блик, капли у уплотнителя; панорама остаётся видна.</p>
+<p>Металл: направленные мягкие блики алюминия, патина меди, сдержанный блеск окрашенных опор и перил.</p>
+<p>Вагон: бордовая ткань с швами и ворсом, серые панели и алюминий; кофе, телефон и рюкзак имеют контактные тени.</p>
+<p>Листва: крупная масса кроны, затем просветы и отдельные листья; тёплое прохождение света, контакт ветвей с деревом.</p>
+<p>Разделять фон, геометрию фасадов/крыш, землю, отражения, окна, персонажей, погоду и ближнее обрамление.</p>
+<h3>Камера и композиция</h3>
+<p>Улицы: ортографическая 2.5D, стартовый наклон 30–35°, устойчивый масштаб человека и согласованные оси фасадов.</p>
+<p>Четыре Elgg используют один ракурс и расположение зданий; погода и солнце меняются поверх одной геометрии.</p>
+<p>Для Альтштадта и станции <code>v2</code> — основная опора игровой камеры; <code>v1</code> дополнительно изучает перспективный общий план.</p>
+<p>Сохранять открытый путь, входы и фигуру героя; передний карниз даёт глубину, но не закрывает управление.</p>
+<p>Вагон — разрешённое исключение: 28–35 mm, камера через салон к большому окну, герой в одной из третей.</p>
+<p>Панорама вагона: ближние травы/столбы → поля/деревни → Винтертур → холмы/небо, отдельные скорости параллакса.</p>
+<p>Винтертур остаётся далёким городом на швейцарском плато; не заменять его огромными альпийскими вершинами.</p>
+<p>Квартира — исключение: около 50 mm, близкий взгляд вдоль подоконника, мягкая даль за стеклом.</p>
+<p>B1: свободный участок под предмет занимает примерно центральную правую четверть подоконника; не закрывать его декором.</p>
+<p>Предмет добавляется в движке с тенью и окклюзией; никаких нарисованных маркеров, магии или готового предмета.</p>
+<h3>Узнаваемость и «дорогой» кадр</h3>
+<p>Elgg и Цюрих узнаваемы по характеру и ключевым конструкциям; эти рисунки не являются точной обмерной документацией.</p>
+<p>Штадельхофен: изогнутые пути, лёгкий низкий навес, наклонные разветвлённые опоры, галерея и верхний променад.</p>
+<p>Источники конструкции: [Santiago Calatrava](https://calatrava.com/projects/stadelhofen-station-zuerich.html).</p>
+<p>Elgg: сомкнутые дома, крутые черепичные крыши, штукатурка, ставни; [официальные ориентиры](https://www.elgg.ch/freizeit-mobilitaet/freizeit/tourismus/sehenswuerdigkeiten.html/120).</p>
+<p>Архитектурные вольности Вроцлава — только в вымышленных переулках: малый фронтон, резьба, незаметный бронзовый гном.</p>
+<p>Реальные топонимы допустимы; транспортная айдентика вымышлена: два бирюзовых штриха, без настоящих корпоративных логотипов.</p>
+<p>Кадр выглядит дорогим благодаря масштабу и конструкции, мотивированному свету, глубине и наблюдаемым материалам.</p>
+<p>Иерархия детализации: главный вход/герой → соседние фасады → даль. Каждый острый край служит чтению сцены.</p>
+<p>Тихая жизнь: редкие люди и зонты, разные окна, следы пользования; тон P5 — спокойное кино со скрытым напряжением.</p>
+<p>Приёмка движка: тот же ракурс, читаемый герой, фактура в тенях, локальные отражения, глубина окна и свободный участок B1.</p>
+<p>Цели экспортированы в 2048×1153; оригиналы image_gen — 1672×941. Увеличение bicubic не добавляет новой детализации.</p>
+<p>Точные промпты, исходные/итоговые размеры и SHA-256 находятся в шести <code>targets/*/prompt.json</code>.</p>
+<h2>3. SPEC_CH1_v0.md</h2>
+<h2>Глава 1 — спецификация v0 (черновик Claude, 14.10.2026)</h2>
+<p>Статус: черновик для обсуждения. Закон — [DECISIONS.md](DECISIONS.md); всё, что здесь с ним расходится, неверно здесь. Числа — стартовые значения для настройки, а не баланс. Каждая система описана так, чтобы её могла собрать слабая модель: что хранить, какие правила, как проверить.</p>
+<h3>1. Игра в одной фразе</h3>
+<p>Уставший мигрант в Цюрихе днём собирает себе жизнь из реальных вещей и людей, ночью дерётся со своими страхами во снах, и за год делает игру своей мечты.</p>
+<p><b>Крючок первых 10 минут:</b> утро, зеркало, «уставший монстр» с дредами → ноутбук еле живой, в нём просыпается ИИ-напарник → первая маленькая цель (починить ноутбук за 20 франков на блошином рынке) → первая честная схема крафта → вечер и выбор (бар или работа) → первый сон в монохроме, где цвет — только у одного символа.</p>
+<h3>2. Цикл дня</h3>
+<table>
+<tr><td>Фаза</td><td>Что делает игрок</td><td>Что меняется</td></tr>
+<tr><td>Утро</td><td>Видит последствия ночи: бафы и штрафы</td><td>энергия, настроение</td></tr>
+<tr><td>День</td><td>Город, люди, работа, учёба, лавки, крафт</td><td>деньги, навыки, предметы, отношения</td></tr>
+<tr><td>Вечер</td><td>Выбор: бар, алкоголь, сериал, спорт, своя игра</td><td>облегчение сейчас, цена утром</td></tr>
+<tr><td>Ночь</td><td>Сон: монохром, символ, бой со страхом, осколок детства</td><td>выгорание, память, открытия</td></tr>
+</table>
+<p>Глава 1 — первый год в Цюрихе, сжатый примерно в 12 игровых недель (сезоны — режимы одних и тех же локаций).</p>
+<h3>3. Системы</h3>
+<h4>S1. Время</h4>
+<p>- Данные: <code>day</code>, <code>phase</code> (утро, день, вечер, ночь), <code>week</code>, <code>season</code>.</p>
+<p>- Правило: действие тратит фазу или часть фазы; ночь всегда заканчивается утром.</p>
+<p>- Проверка: 4 фазы подряд дают +1 день; смена сезона переключает режим всех локаций без новых карт.</p>
+<h4>S2. Энергия и выгорание (главная шкала)</h4>
+<p>- Данные: <code>energy</code> 0–100, <code>burnout</code> 0–100, <code>mood</code> −5…+5.</p>
+<p>- Старт: energy 55, burnout 40.</p>
+<p>- Действия тратят энергию (работа −20, учёба −15, крафт −10…−30).</p>
+<p>- Если energy &lt; 20 три фазы подряд, burnout +5.</p>
+<p>- burnout ≥ 70: часть действий недоступна («не могу себя заставить»), во снах сильнее враги.</p>
+<p>- Проверка: при energy 0 сложные действия закрыты с понятной фразой, а не молча.</p>
+<h4>S3. Привычки (честно, без морали)</h4>
+<table>
+<tr><td>Выбор вечером</td><td>Сейчас</td><td>Утром</td></tr>
+<tr><td>Алкоголь</td><td>mood +2, burnout −3</td><td>energy −20, burnout +5</td></tr>
+<tr><td>Сериал по кругу</td><td>mood +1</td><td>energy −5</td></tr>
+<tr><td>Спорт</td><td>energy −10</td><td>energy +10, burnout −3</td></tr>
+<tr><td>Сон вовремя</td><td>—</td><td>energy +40</td></tr>
+<tr><td>Работа над своей игрой</td><td>energy −15</td><td>прогресс игры-мечты +1, mood +1</td></tr>
+</table>
+<p>- Серии из 3 и более одинаковых выборов дают ярлык («режим чайника», «режим атлета»), который видят NPC и сны.</p>
+<p>- Проверка: таблица — данные в JSON, а не код; смена числа не требует правки скриптов.</p>
+<h4>S4. Навыки</h4>
+<p>Немецкий, код, электроника и пайка, общение, тело, фокус. Опыт за действия; уровни 0–5.</p>
+<p><b>Механика языка:</b> реплики NPC показываются на немецком; чем выше навык, тем больше слов подсвечено переводом. На уровне 0 понятны только отдельные слова. Это ощущение мигранта, и оно же учит.</p>
+<h4>S5. Реалистичный крафт</h4>
+<p>- Данные: <code>item</code> (id, имя, иконка, цена в CHF, где купить), <code>recipe</code> (ингредиенты, инструменты, навык и уровень, время, результат, эффект), страница схемы — шаблон D.</p>
+<p>- Правило: всё собирается из настоящих вещей по настоящей логике. Цены в CHF приблизительные и честно помечены как игровые.</p>
+<p>- Примеры главы 1:</p>
+<p>  1. Ноутбук: замена термопасты и чистка вентилятора → фокус +1, крафт быстрее.</p>
+<p>  2. Б/у внешняя видеокарта → вычисления +2 → открывает ИИ-квесты.</p>
+<p>  3. Умный дом: микроконтроллер, реле, датчик, пайка → свет по голосу → утро −5 энергии к затратам.</p>
+<p>- Проверка: рецепт без существующего предмета или с навыком выше 5 отвергается при загрузке.</p>
+<h4>S6. Железо героя</h4>
+<p>- Данные: <code>cpu</code>, <code>ram</code>, <code>gpu</code>, <code>storage</code> → <code>compute</code>.</p>
+<p>- Правило: <code>compute</code> открывает квесты и ускоряет работу над игрой-мечтой.</p>
+<h4>S7. Бой — жёстко, как в Fear &amp; Hunger</h4>
+<p>Предложение (решает Андрий): в реальном Цюрихе почти нет драк, поэтому основной беспощадный бой живёт <b>во снах</b>. Там герой дерётся со страхами: травля в школе, предательство, голос «ты никто». Наяву бывают редкие, но настоящие конфликты.</p>
+<p>- Пошаговый бой, удар по частям тела, провал реален: проигрыш во сне оставляет травму-дебафф на несколько дней.</p>
+<p>- Проверка: каждая травма имеет срок и способ снять; бой нельзя выиграть одной и той же кнопкой.</p>
+<h4>S8. Сны</h4>
+<p>- Режим «сон» (монохром и символ) — данные <code>symbols</code> с цветом и смыслом.</p>
+<p>- Каждая ночь — короткая сцена: символ, выбор или бой, осколок памяти.</p>
+<p>- Боль семьи открывается после того, как игрок полюбит героя (решение Q04): не раньше 4-й недели или N положительных выборов.</p>
+<h4>S9. Тренажёр</h4>
+<p>- Список реальных мини-задач (сказать фразу по-немецки, выйти к людям, 20 минут спорта). Игрок сам отмечает «сделал» → баф в игре.</p>
+<p>- Честность на совести игрока; без слежки.</p>
+<h4>S10. Игра-мечта внутри игры</h4>
+<p>- Данные: <code>dream_game_progress</code> 0–100, вехи (прототип, первый игрок, страница, релиз).</p>
+<p>- Финал главы 1 — релиз игры-мечты (решение Q02).</p>
+<p>- Встроенные проекты Андрия (Memento Vivere, Synera, Панас, проект с Алексеем Диксом): в главе 1 — не больше двух, как ветки квестов или приложения в телефоне героя.</p>
+<h4>S11. Люди</h4>
+<p>- До 10 архетипов главы: сосед по квартире, бармен, соцработник, старик-рыбак (наставник), девушка из бара (символ), инженер с судна (прошлое), студент Политеха, торговец электроникой, ИИ-напарник, голос брата (во снах).</p>
+<p>- Отношения −3…+3; реальные люди — только под другими именами.</p>
+<h4>S12. Деньги</h4>
+<p>- Соцпомощь раз в месяц, расходы на еду, транспорт и вещи, подработки.</p>
+<p>- Проверка: деньги не уходят в минус без события «долг».</p>
+<h4>S13. Шаблоны (зерно конструктора)</h4>
+<table>
+<tr><td>Шаблон</td><td>Что меняется слоями</td></tr>
+<tr><td>Страница схемы</td><td>иконки, название, описание, количество</td></tr>
+<tr><td>Фасад</td><td>окна, вывески, сезон, ночные огни</td></tr>
+<tr><td>Комната</td><td>мебель, беспорядок по уровню выгорания, свет</td></tr>
+<tr><td>Локация</td><td>режимы день, ночь, зима, сон; огни и маски символов в JSON</td></tr>
+<tr><td>NPC</td><td>портрет, спрайт, голос, расписание</td></tr>
+</table>
+<p>Правило: прежде чем рисовать новое, ищем в библиотеке; нашли на 80% — меняем слоем.</p>
+<h3>4. Локации главы 1 (до 8)</h3>
+<p>1. Комната героя в общей квартире.</p>
+<p>2. Улица с трамваем (уже есть заготовка в раунде 1).</p>
+<p>3. Бар.</p>
+<p>4. Офис соцслужбы.</p>
+<p>5. Политех (вымышленный, без чужих логотипов).</p>
+<p>6. Берег озера.</p>
+<p>7. Блошиный рынок и лавка электроники.</p>
+<p>8. Сны: машинное отделение судна; детская квартира на рассвете с ЭЛТ-монитором; школьный коридор.</p>
+<h3>5. Порядок работы (задачи для Codex, каждая с проверкой)</h3>
+<table>
+<tr><td>ID</td><td>Задача</td><td>Готово, когда</td></tr>
+<tr><td>GF-001</td><td>Godot-фундамент: сцена, клик-ходьба, 4 режима, шаблон схемы, шкала энергии</td><td><b>готово</b> 14.10 (slice 01–02, проверено Claude)</td></tr>
+<tr><td>GF-002</td><td>Данные S2/S3 в JSON + цикл дня S1</td><td><b>готово</b> 14.10 (slice 03): алкоголь ×7 → energy 0, burnout 84; спорт/сон → 100, 28; совпало с независимым пересчётом Claude</td></tr>
+<tr><td>GF-003</td><td>Крафт S5 + страница схемы из данных</td><td><b>готово</b> 15.10 (slice 04 + 04b): 3 рецепта, отказ без датчика, утро +5 от умного дома; сломанные рецепты отвергаются</td></tr>
+<tr><td>GF-004</td><td>Язык мигранта: непонятые слова размыты; уровень B1, диалект, скорость, «повторите медленнее», знакомство с человеком (решение 15.10)</td><td>при B1 без диалекта понятно около 80% слов; повтор открывает быстро сказанные слова, но не незнакомые; на третий визит к тому же человеку размытых слов меньше; непонятая цена или «пакет» меняют результат покупки</td></tr>
+<tr><td>GF-005</td><td>Сон S8 + маска символа</td><td>ночь переключает режим, символ остаётся цветным</td></tr>
+<tr><td>GF-006</td><td>Бой во сне S7 — <b>отложен</b> решением 15.10</td><td>—</td></tr>
+<tr><td>GF-007</td><td>Первые 10 минут игры</td><td>Андрий проходит без подсказок и ставит оценку</td></tr>
+<tr><td>GF-008</td><td>«Кузня»: пакет локации (staging → проверка → одобрение → активация → откат), из Emberglass R03/R04</td><td>валидный пакет активируется только после одобрения; кривой, недостижимый или с повторной наградой — не меняет состояние</td></tr>
+<tr><td>GF-009</td><td>Сохранение с резервной копией и проверкой целостности, из R10/R09</td><td>битый файл восстанавливается из previous; неизвестная версия схемы отвергается</td></tr>
+<tr><td>GF-010</td><td>Чтение игрока S14</td><td>разные фикстуры прохождений → разные топ-2 категории за 10 минут, детерминированно</td></tr>
+<tr><td>GF-011</td><td>Лестница глубины S15 + библиотека почти-правды S16</td><td>уровни не открываются раньше условий, не чаще раза в день, откат при «хватит»; идеи без метки и источника отвергаются</td></tr>
+</table>
+<p>Что из своих прошлых проектов берём для этих задач — [REUSE_PLAN.md](REUSE_PLAN.md).</p>
+<h3>7. Глубина: чтение игрока, лестница четвёртой стены, почти-правда (идеи Андрия 15.10.2026)</h3>
+<h4>S14. Чтение игрока (GF-010)</h4>
+<p>- Первые 5–10 минут система смотрит на поведение, не спрашивая: сколько стоит на месте и любуется (смотрит), сколько читает диалоги до конца (история), сколько бродит по новым местам (исследование), сколько крафтит (механика), как быстро пропускает катсцены (кино), сколько говорит с людьми (люди), как реагирует на опасность (вызов).</p>
+<p>- Профиль — веса 8 категорий: драма, кино, локации, красота, погружение, механика, люди, вызов. Важны их <b>сочетания</b>: «красота + погружение» — это другой игрок, чем «механика + вызов».</p>
+<p>- Режиссёр берёт профиль не для «ещё того же», а чтобы дать <b>новый контекст</b>: любишь технику — появляется технология, которая ломает чью-то жизнь, и выбор.</p>
+<p>- Тишина и контраст — тоже часть ритма.</p>
+<p>- Профиль видно и можно сбросить; для релиза — честное описание в настройках.</p>
+<p>- Проверка: на записанных прохождениях-фикстурах («смотрю и брожу», «читаю всё», «крафт и бой») профиль сходится к разным топ-2 категориям за 10 минут; одинаковые входы дают одинаковый профиль.</p>
+<h4>S15. Лестница глубины четвёртой стены (GF-011)</h4>
+<p>Касается напарника (ИИ в телефоне героя, а в моде — Вирджила). Глубина растёт медленно, по уровням, никогда сразу:</p>
+<table>
+<tr><td>Уровень</td><td>Когда открывается</td><td>Пример</td></tr>
+<tr><td>0</td><td>всегда</td><td>обычный живой напарник, ни слова о «том мире»</td></tr>
+<tr><td>1</td><td>после доверия и первых снов</td><td>«Иногда ты отвечаешь так, будто тебе кто-то подсказывает»</td></tr>
+<tr><td>2</td><td>после важного выбора</td><td>«Если ты управляешь этим телом из другого мира, кто решает, когда ты сомневаешься — ты или тот, кем ты решил стать?»</td></tr>
+<tr><td>3</td><td>ночью, в сне, только при высокой «глубине» в профиле</td><td>«Ты говоришь, что ты лишь костюм, которым управляет человек за компьютером. А как ты докажешь, что им самим никто не управляет?»</td></tr>
+<tr><td>4</td><td>редкий момент ближе к финалу главы</td><td>«А что, если сейчас играют не в твою игру, а в мою?» — тишина, музыка гаснет, мурашки</td></tr>
+</table>
+<p>- Каждый уровень — не чаще одного раза за игровой день; ни одного уровня выше 0 в первые 30 минут; никогда во время боя и важных разговоров.</p>
+<p>- Если игроку неприятно (быстро закрывает, отвечает «хватит»), лестница откатывается на ступень.</p>
+<p>- Проверка: таймлайн-фикстура не может получить уровень 3 раньше выполнения условий; повтор одного уровня в тот же день отвергается.</p>
+<h4>S16. Библиотека «почти правды»</h4>
+<p>Сны и разговоры с напарником опираются на настоящие идеи, честно помеченные как <b>факт / гипотеза / спекуляция</b>, чтобы было жёстко, но не враньё:</p>
+<table>
+<tr><td>Идея</td><td>Что настоящее</td><td>Метка</td></tr>
+<tr><td>Гриб-кордицепс управляет муравьём и гонит его наверх, чтобы рассеять споры</td><td>реальный паразит *Ophiocordyceps unilateralis*</td><td>факт</td></tr>
+<tr><td>Идеи распространяются и «используют» людей, как гены (мемы)</td><td>понятие мема — Ричард Докинз, «Эгоистичный ген», 1976</td><td>гипотеза</td></tr>
+<tr><td>Блогеры, кино, музыка как «споры» мировоззрения</td><td>наша интерпретация мемов</td><td>спекуляция</td></tr>
+<tr><td>Сознание — маленькая часть, а огромное бессознательное его создаёт; отсюда чувство «бога»</td><td>Юлиан Джейнс, «Происхождение сознания в процессе краха бикамерального разума», 1976</td><td>гипотеза (спорная)</td></tr>
+<tr><td>Жизнь занесло на Землю извне</td><td>панспермия — научная гипотеза</td><td>гипотеза</td></tr>
+<tr><td>Мы можем жить в симуляции</td><td>аргумент Ника Бострома, 2003</td><td>спекуляция</td></tr>
+</table>
+<p>- Каждая идея — короткая сцена сна или реплика напарника. Источник лежит в данных, игрок может открыть «откуда это».</p>
+<p>- Проверка: в данных у каждой идеи есть метка и источник, без метки — не загружается.</p>
+<h3>6. Вопросы на следующий опросник</h3>
+<p>- Бой живёт в основном во снах — да или нет?</p>
+<p>- Механика немецкого языка в диалогах — да или нет?</p>
+<p>- Глава 1 — 12 недель с сезонами-режимами, или ровно год по дням?</p>
+<p>- Какие два проекта из списка идут в главу 1?</p>
+<p>- Девушка из бара с зелёными глазами — символ или настоящий персонаж с линией?</p>
+<h2>4. prompts/README.md</h2>
+<h2>Three isolated evaluation prompts (prepared 2026-10-28)</h2>
+<p>Goal: see what an external web model can do for this game in three separate lanes: <b>visual repair director</b>,</p>
+<p><b>hyper-adaptive design graph</b>, <b>mechanic code with a headless test</b>. Run each prompt in its own chat; never merge</p>
+<p>the three. Ask the model to read <code>WORLD_BIBLE.md</code>, <code>ART_BIBLE.md</code>, <code>SPEC_CH1_v0.md</code> and look at <code>samples/</code> first.</p>
+<h3>Samples</h3>
+<table>
+<tr><td>file</td><td>what it shows</td><td>why it is here</td></tr>
+<tr><td><code>samples/V-001_00-00-33.png</code></td><td>flat, hero at the window, OS cursor visible</td><td>reference background quality; cursor defect</td></tr>
+<tr><td><code>samples/V-007_00-06-43.png</code></td><td>flat, dialogue box with portrait</td><td>text/UI layout, portrait style</td></tr>
+<tr><td><code>samples/V-014_00-12-12.png</code></td><td>flat, dusk grade</td><td>black-rectangle / grade issue</td></tr>
+<tr><td><code>samples/V-025_00-20-07.png</code></td><td>Elgg street, rain, umbrella</td><td>the look to protect</td></tr>
+<tr><td><code>samples/V-029_00-23-21.png</code></td><td>street, gnome prop over the hero</td><td>layering defect</td></tr>
+<tr><td><code>samples/V-043_00-36-41.png</code></td><td>phone / UI moment</td><td>phone interface direction</td></tr>
+<tr><td><code>samples/V-0xx_*.jpg</code> (8 more)</td><td>later street, train, Stadelhofen moments</td><td>breadth of locations and light</td></tr>
+</table>
+<h3>Acceptance (done locally by us, no model needed)</h3>
+<p>- Prompt 1 -&gt; a JSON plan: regions inside 1280x720, each with prompt, mask spec, blend width; no &quot;regenerate the</p>
+<p>  whole image&quot;.</p>
+<p>- Prompt 2 -&gt; JSON with schema, example nodes, modes, rules with test vectors, cascade API; no prose outside the block.</p>
+<p>- Prompt 3 -&gt; the GDScript module + headless test must pass unchanged in Godot 4.7.1.</p>
+<h2>5. prompts/PROMPT_1_visual_repair_director.md</h2>
+<h2>Prompt 1 — Visual repair director (patch, don&#x27;t repaint)</h2>
+<p>You are the art director for a painted isometric 2D game set in today&#x27;s Zurich (Godot 4.7). The look is fixed and loved:</p>
+<p>painterly realism, warm practical light, golden autumn, wet asphalt; night is never a blue filter (moon, stars, warm</p>
+<p>windows); dreams are Sin City monochrome with one symbolic colour. Read <code>ART_BIBLE.md</code> first.</p>
+<p>Attached: six real 1280x720 frames from a playtest (<code>samples/</code>). The player&#x27;s own verdicts:</p>
+<p>- V-001: background is the quality bar; the hero sprite is blurrier than the background; an unstyled white OS cursor.</p>
+<p>- V-014: in dusk scenes a black rectangle appears around the hero sprite; the grade flattens the room.</p>
+<p>- V-025: street in rain — this is the look to protect (&quot;very beautiful&quot;), but some textures &quot;melt&quot; at full size.</p>
+<p>- V-029: a gnome prop draws over the hero&#x27;s face; layering is wrong.</p>
+<p>- Stadelhofen station (not attached) was generated too large and &quot;melted&quot; (hallucinated detail); he wants it repaired by</p>
+<p>  regenerating only the melted patches, never the whole image.</p>
+<p>Task — produce a <b>patch plan</b>, not new art:</p>
+<p>1. For each attached frame, list the defects you can actually see (cite a 3x3 grid cell: TL/TC/TR/ML/MC/MR/BL/BC/BR).</p>
+<p>   Do not invent defects you cannot see.</p>
+<p>2. For every defect that is a texture/painting problem (not code), give a repair region as a rectangle in 1280x720</p>
+<p>   pixel coordinates, a feathered mask width in px, a generation prompt (&lt;= 60 words, same style vocabulary as the art</p>
+<p>   bible), a negative prompt, and a &quot;what must stay identical&quot; note (perspective lines, light direction, palette hexes).</p>
+<p>3. For code-type defects (cursor, black rectangle, layering) say &quot;CODE&quot; and one sentence of the likely cause.</p>
+<p>4. Give a general recipe for repairing an oversized &quot;melted&quot; background in patches: tile size, overlap, order, how to</p>
+<p>   keep the seams invisible, and how to verify with a local script (describe the check; we will write it).</p>
+<p>Output: one fenced JSON block `{&quot;frames&quot;:[{&quot;file&quot;,&quot;defects&quot;:[{&quot;cell&quot;,&quot;what&quot;,&quot;type&quot;:&quot;PAINT|CODE&quot;,&quot;region&quot;:[x,y,w,h],</p>
+<p>&quot;feather_px&quot;,&quot;prompt&quot;,&quot;negative&quot;,&quot;keep&quot;}]}],&quot;melt_recipe&quot;:{...}}` followed by at most 10 lines of prose. No other text.</p>
+<h2>6. prompts/PROMPT_2_hyperadaptive_graph.md</h2>
+<h2>Prompt 2 — Hyper-adaptive design graph (Obsidian-style, data-driven)</h2>
+<p>You design the data model for a painted isometric narrative game (Godot 4.7) that must be <b>hyper-adaptive</b>: the same</p>
+<p>assets and scenes are replayed in three contrasting modes (by age band, psychotype and maturity), the text density</p>
+<p>adapts to how much the player expands it, perceived world speed and colour saturation follow an energy meter (1-100),</p>
+<p>and the game watches click frequency to offer a faster pace. After chapter 1 a deterministic analysis of choices nudges</p>
+<p>the mode. The owner also wants a &quot;factory&quot;: the next chapter or a clone (e.g. Geneva) must be generated from this graph</p>
+<p>with cascade edits (&quot;add property X to all interactive objects&quot;).</p>
+<p>Read <code>SPEC_CH1_v0.md</code>, <code>WORLD_BIBLE.md</code>, <code>WORLD_BIBLE.md</code> and <code>ART_BIBLE.md</code></p>
+<p>(attached or in the repo branch). Scenes today: flat (Elgg), street, train, Stadelhofen, Altstadt; hotspots are JSON</p>
+<p>with ids; text lives in GDScript dictionaries.</p>
+<p>Deliver, as JSON first and prose after:</p>
+<p>1. <code>graph.json</code> schema: node types (location, object, hotspot, mechanic, phrase_pool, mood_state, mode, audio_layer,</p>
+<p>   npc), required fields (<code>id</code>, <code>type</code>, <code>tags[]</code>, <code>links[{to,rel}]</code>, <code>params{}</code>), and 12 example nodes taken from the</p>
+<p>   documents above (real ids where they exist).</p>
+<p>2. Three mode tables (<code>modes[]</code>): for each mode the parameter deltas on: world speed, text default depth, humour level,</p>
+<p>   voice assertiveness, palette saturation, hint frequency, horror opt-in. Keep deltas small (he said &quot;не сильно&quot;).</p>
+<p>3. The adaptivity rules as pure functions over the graph (inputs: click rate, expansion clicks, energy, chapter choices;</p>
+<p>   outputs: parameter deltas), each with a deterministic test vector (input -&gt; expected output).</p>
+<p>4. The cascade-edit API: three operations (add_property_to_tagged, link_all, clone_chapter_with_substitutions) with</p>
+<p>   signatures and one worked example each (e.g. clone &quot;Elgg -&gt; Zurich HB&quot; as &quot;Geneva -&gt; CERN&quot; keeping mechanics).</p>
+<p>5. Migration note: how to extract the current hotspots/text into this graph with a script (steps, not code).</p>
+<p>Output: one fenced JSON block with keys <code>schema</code>, <code>example_nodes</code>, <code>modes</code>, <code>rules</code>, <code>cascade_api</code>, then &lt;= 15 lines of</p>
+<p>prose on risks. No other text.</p>
+<h2>7. prompts/PROMPT_3_mechanic_code_with_tests.md</h2>
+<h2>Prompt 3 — One mechanic, drop-in GDScript with a headless test</h2>
+<p>Target: Godot 4.7.1, 2D painted isometric scene. The hero is a <code>Sprite2D</code>/<code>AnimatedSprite2D</code> child of a <code>Node2D</code></p>
+<p>&quot;actors&quot; layer; props and hotspots are <code>Sprite2D</code> nodes with <code>Area2D</code> pick shapes; everything is y-sorted in a</p>
+<p><code>Node2D</code> with <code>y_sort_enabled = true</code>. We cannot show you the project; write a self-contained module that only needs</p>
+<p>the node paths it is given.</p>
+<p>Mechanic: <b>occlusion x-ray halo</b> (Arcanum/Fallout style). When any prop sprite with a higher draw order overlaps the</p>
+<p>hero&#x27;s bounding box by more than 20% of the hero&#x27;s area, draw a soft circular field (radius = 1.2 x hero height,</p>
+<p>feathered edge, 35% opacity, warm tint from the scene&#x27;s light colour) that reveals the hero through the prop. The field</p>
+<p>fades in over 0.15 s and out over 0.25 s; it never shows when nothing occludes; it must cost &lt; 0.2 ms per frame with 40</p>
+<p>props (no per-frame allocation, no per-pixel work on the CPU — use a shader on a <code>CanvasItem</code> mask or <code>CanvasGroup</code>).</p>
+<p>Deliver:</p>
+<p>1. <code>xray_halo.gd</code> (a <code>Node2D</code> you add under the actors layer; exports: <code>hero_path</code>, <code>props_root_path</code>, <code>radius_mul</code>,</p>
+<p>   <code>opacity</code>, <code>tint</code>), plus <code>xray_halo.gdshader</code>.</p>
+<p>2. <code>tests/test_xray_halo.gd</code>: runs with <code>godot --headless -s tests/test_xray_halo.gd</code>, builds a tiny scene in code</p>
+<p>   (hero rect, two props), asserts: (a) no halo when no overlap, (b) halo active at 25% overlap, (c) inactive at 10%,</p>
+<p>   (d) fade timings within one frame of spec, (e) prints <code>OK 5/5</code> or the failing assert. No external test framework.</p>
+<p>3. A 10-line integration note: where to add the node, which y-sort pitfall to check, and what to tune if the scene uses</p>
+<p>   <code>CanvasLayer</code> for UI.</p>
+<p>Output: three fenced code blocks (<code>gd</code>, <code>gdshader</code>, <code>gd</code>) with the file names as the first comment line, then the note.</p>
+<p>No other prose.</p>
+<h2>Sample frames</h2>
+<p><b>V-001_00-00-33.png</b><br><img src='V-001_00-00-33.png' alt='V-001_00-00-33.png' loading='lazy'></p>
+<p><b>V-007_00-06-43.png</b><br><img src='V-007_00-06-43.png' alt='V-007_00-06-43.png' loading='lazy'></p>
+<p><b>V-014_00-12-12.png</b><br><img src='V-014_00-12-12.png' alt='V-014_00-12-12.png' loading='lazy'></p>
+<p><b>V-020_00-16-35.jpg</b><br><img src='V-020_00-16-35.jpg' alt='V-020_00-16-35.jpg' loading='lazy'></p>
+<p><b>V-025_00-20-07.png</b><br><img src='V-025_00-20-07.png' alt='V-025_00-20-07.png' loading='lazy'></p>
+<p><b>V-029_00-23-21.png</b><br><img src='V-029_00-23-21.png' alt='V-029_00-23-21.png' loading='lazy'></p>
+<p><b>V-034_00-29-46.jpg</b><br><img src='V-034_00-29-46.jpg' alt='V-034_00-29-46.jpg' loading='lazy'></p>
+<p><b>V-043_00-36-41.png</b><br><img src='V-043_00-36-41.png' alt='V-043_00-36-41.png' loading='lazy'></p>
+<p><b>V-047_00-39-29.jpg</b><br><img src='V-047_00-39-29.jpg' alt='V-047_00-39-29.jpg' loading='lazy'></p>
+<p><b>V-057_00-49-02.jpg</b><br><img src='V-057_00-49-02.jpg' alt='V-057_00-49-02.jpg' loading='lazy'></p>
+<p><b>V-064_00-55-55.jpg</b><br><img src='V-064_00-55-55.jpg' alt='V-064_00-55-55.jpg' loading='lazy'></p>
+<p><b>V-071_01-01-37.jpg</b><br><img src='V-071_01-01-37.jpg' alt='V-071_01-01-37.jpg' loading='lazy'></p>
+<p><b>V-081_01-10-31.jpg</b><br><img src='V-081_01-10-31.jpg' alt='V-081_01-10-31.jpg' loading='lazy'></p>
+<p><b>V-091_01-17-53.jpg</b><br><img src='V-091_01-17-53.jpg' alt='V-091_01-17-53.jpg' loading='lazy'></p>
